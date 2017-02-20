@@ -1,8 +1,9 @@
 .footerAll {
-    background-color: red;
+    background-color: #42bec3;
     width:100%;
     min-height: 60px;
     position:absolute;
     left:0px;
     bottom:0px;
+    display:inline-block;
 }

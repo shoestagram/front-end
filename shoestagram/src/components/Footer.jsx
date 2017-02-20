@@ -5,8 +5,15 @@ class Footer extends React.Component {
   render() {
     return (
     <div className="footerAll">
-    Footer goes here
-    
+      <div className="homeDiv">
+       <img src="/shoestagram/src/images/homeicon.svg" alt="Home"/>
+      </div>
+      <div className="cartDiv">
+      
+      </div>
+      <div className="profileDiv">
+      
+      </div>
     </div>
     );
   }
