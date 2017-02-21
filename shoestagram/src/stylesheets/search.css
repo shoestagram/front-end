@@ -1,11 +1,46 @@
-.inputDiv {
-    height: 21px;
-    max-width:160px;
+.searchBox {
+  width: 100%;
+  clear: both;
+  text-align: left;
 }
 
-.searchButton {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-}
+
+  .inputDiv {
+      height: 25px;
+      border-width: 0;
+      background-color: rgb(105, 194, 197);
+      color: #FFF;
+      width: 100%;
+      margin-right: -27px;
+
+  }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #FFF;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: #FFF;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: #FFF;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: #FFF;
+    }
+
+  .searchButton {
+    height: 27px;
+    width: 27px;
+    padding: 1px;
+    background-color: #42bec3;
+    cursor: auto;
+    border-width: 0;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    margin-right: -75px;
+  }
+
+    .inputDiv:focus, .searchButton:focus {
+      outline: -webkit-focus-ring-color auto 0px;
+    }

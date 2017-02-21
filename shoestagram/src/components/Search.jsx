@@ -4,10 +4,14 @@ import '../stylesheets/search.css';
 class Search extends React.Component {
   render() {
     return (
-      <form className="form-wrapper">
-        <input type="text" placeholder="Search here..." className="inputDiv"/>
-        <input type="text" class="searchButton" id="iconified" placeholder="&#xF002;"/>
-      </form>
+      <div className="searchBox">
+
+          <input type="text" placeholder="Search here..." className="inputDiv" />
+          <button className="searchButton">
+            <i className="fa fa-search" aria-hidden="true"></i>
+          </button>
+
+      </div>
       );
   }
 }
