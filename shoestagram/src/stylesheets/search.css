@@ -1,0 +1,11 @@
+.inputDiv {
+    height: 21px;
+    max-width:160px;
+}
+
+.searchButton {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}

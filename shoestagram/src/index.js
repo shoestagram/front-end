@@ -11,7 +11,7 @@ const routes = (
     <Router history={ browserHistory }>
         <Route path="/" component={ App }>
             <IndexRoute component={ Home } />
-            <Route path="/medias/" component={Media}/>
+            <Route path="/media/" component={Media}/>
         </Route>
     </Router>
 );

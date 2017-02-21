@@ -1,0 +1,48 @@
+.mediaJumboPic {
+    height: 80vw;
+    width: 100vw;
+    background-color: blue;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+
+.headerStyle {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: red;
+    text-overflow:auto;
+    line-height: 100%;
+    margin:0;
+    padding: 3%;
+    margin-top:3%;
+}
+
+.parStyle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    padding: 0 3%;
+    background-color: purple;
+}
+
+.buttonRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buyOnline {
+    background-color: #52386d;
+    color: white;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+}
+
+.buyInStore {
+    background-color: #52386d;
+    color: white;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+}
