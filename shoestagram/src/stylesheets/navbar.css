@@ -6,8 +6,7 @@
 
 .logoDiv {
     background-color: #1a1423;
-    min-height: 20px;
-    max-height: 25px;
+    height: 25px;
     font-family: 'Poppins', sans-serif;
     color: white;
 }

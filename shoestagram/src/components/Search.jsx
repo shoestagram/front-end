@@ -4,7 +4,7 @@ import '../stylesheets/search.css';
 class Search extends React.Component {
   render() {
     return (
-      <form class="form-wrapper cf">
+      <form className="form-wrapper cf">
         <input type="text" placeholder="Search here..." name="inputDiv"/>
         <input type="button" value="search"/>
       </form>
