@@ -6,7 +6,7 @@ class Search extends React.Component {
     return (
       <div className="searchBox">
 
-          <input type="text" placeholder="Search here..." className="inputDiv" />
+          <input type="text" placeholder="" className="inputDiv" />
           <button className="searchButton">
             <i className="fa fa-search" aria-hidden="true"></i>
           </button>

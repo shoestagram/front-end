@@ -1,0 +1,19 @@
+.profilePic {
+    border-radius: 50%;
+    margin: auto;
+    border: 3px solid #52386d;
+}
+
+.textAll {
+    line-height: 80%;
+    margin: auto;
+    display: column;
+    text-align: left;
+    margin-left: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.profileRow {
+    display: flex;
+    background-color: #b7b7b7;
+}

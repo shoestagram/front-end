@@ -1,5 +1,6 @@
 import React, { PropTypes as T } from 'react';
 import AuthService from '../utils/AuthService';
+import '../stylesheets/profile.css';
 
 export class Profile extends React.Component {
   static contextTypes = {
@@ -26,14 +27,14 @@ export class Profile extends React.Component {
     const { profile } = this.state;
     console.log(profile);
     return (
-        <div>
-          <img src={profile.picture} alt="Your profile" />
-          <h3>Profile</h3>
-          <p><strong>Name: </strong> {profile.name}</p>
-          <p><strong>Email: </strong> {profile.email}</p>
-          <p><strong>Nickname: </strong> {profile.nickname}</p>
-          <p><strong>Created At: </strong> {profile.created_at}</p>
-          <p><strong>Updated At: </strong> {profile.updated_at}</p>
+        <div className="profileAll">
+          <div className="profileRow">
+             <img className="profilePic" src={profile.picture} alt="Your profile" />
+             <div className="textAll">
+              <p><strong>Name: </strong> {profile.name}</p>
+              <p><strong>Nickname: </strong> {profile.nickname}</p>
+            </div>
+          </div>
         </div>
     );
   }

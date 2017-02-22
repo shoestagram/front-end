@@ -2,12 +2,10 @@
 .headerAll {
     background-color: #52386d;
     min-height: 80px;
-    position:absolute;
+    position:fixed;
     max-width: 600px;
     width:100%;
     top:0;
-    left: 0;
-    right: 0;
     height: 80px;
 }
 
@@ -35,9 +33,10 @@
 }
 
 .logoDiv {
-    background: rgba(26, 20, 35, 0.3);
+    background: rgba(26, 20, 35, 0.5);
     height: 25px;
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 .logoDiv p {
@@ -50,10 +49,10 @@
      background: #42bec3;
      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.81);
      color: white;
-     padding: 8px 12px;
+     padding: 7px 11px;
      font-weight: bold;
      font-size: 18px;
-     margin-top: 7px;
+     margin-top: 8px;
      margin-left: -12px;
 
 }
