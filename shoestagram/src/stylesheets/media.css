@@ -16,6 +16,7 @@
     margin:0;
     padding: 3%;
     margin-top:3%;
+    font-weight: 600;
 }
 
 .parStyle {
@@ -29,6 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 0.8em;
 }
 
 .buyOnline {
@@ -37,6 +39,7 @@
     padding: 0.8em;
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
+    font-weight: 600;
 }
 
 .buyInStore {
@@ -45,4 +48,49 @@
     padding: 0.8em;
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
+    font-weight: 600;
+}
+
+.linkDiv {
+    background-color: #52386d;
+    min-height: 60px;
+    margin-bottom: 5px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    width: 100%;
+    display: flex;
+}
+
+.linkButton {
+    min-width: 50px;
+    margin-left: 3%;
+    margin: auto;
+}
+
+.words {
+    line-height: 100%;
+    margin: auto;
+    text-align: left;
+    padding: 8px;
+}
+
+.productName {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-bottom: 1%;
+    margin: auto;
+    text-align: left;
+    overflow:hidden;
+    max-height: 66px;
+}
+
+.priceDiv {
+    margin: auto;
+}
+
+.googleMapsContainer {
+    height: 80vw;
+    width: 100vw;
+    background-color: red;
+    max-width: 600px;
+    max-height: 600px;
 }
