@@ -1,5 +1,6 @@
-import React, { PropTypes as T } from 'react'
-import AuthService from '../utils/AuthService'
+import React, { PropTypes as T } from 'react';
+import AuthService from '../utils/AuthService';
+import '../stylesheets/login.css';
 
 
 
@@ -10,15 +11,15 @@ export class Login extends React.Component {
   }
 
   render() {
-    const { auth } = this.props
+    const { auth } = this.props;
     return (
-      <div>
-        <h2>Login</h2>
+      <div className="loginContainer">
+        <h2 className="loginText">Click To Proceed</h2>
         <div>
-          <button onClick={auth.login.bind(this)}>Login</button>
+          <button className="loginButton" onClick={auth.login.bind(this)}>Login</button>
         </div>
       </div>
-    )
+    );
   }
 }
 
