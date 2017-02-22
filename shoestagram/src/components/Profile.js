@@ -1,5 +1,5 @@
-import React, { PropTypes as T } from 'react'
-import AuthService from '../utils/AuthService'
+import React, { PropTypes as T } from 'react';
+import AuthService from '../utils/AuthService';
 
 export class Profile extends React.Component {
   static contextTypes = {
@@ -11,15 +11,15 @@ export class Profile extends React.Component {
   }
 
   constructor(props, context) {
-    super(props, context)
+    super(props, context);
     console.log(props);
     this.state = {
       profile: props.auth.getProfile()
-    }
+    };
     //listen to profile_updated events to update internal state
     props.auth.on('profile_updated', (newProfile) => {
-      this.setState({profile: newProfile})
-    })
+      this.setState({profile: newProfile});
+    });
   }
 
   render() {
@@ -27,7 +27,7 @@ export class Profile extends React.Component {
     console.log(profile);
     return (
         <div>
-          <img src={profile.picture} />
+          <img src={profile.picture} alt="Your profile" />
           <h3>Profile</h3>
           <p><strong>Name: </strong> {profile.name}</p>
           <p><strong>Email: </strong> {profile.email}</p>
@@ -35,7 +35,7 @@ export class Profile extends React.Component {
           <p><strong>Created At: </strong> {profile.created_at}</p>
           <p><strong>Updated At: </strong> {profile.updated_at}</p>
         </div>
-    )
+    );
   }
 }
 
