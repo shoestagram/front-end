@@ -15,5 +15,21 @@
 
 .profileRow {
     display: flex;
-    background-color: #b7b7b7;
+    background-color: #ecdded;
+}
+
+.squareDiv {
+    height: 30.52vw;
+    width: 30.52vw;
+    background-color: pink;
+    margin: 3px;
+    max-height: 190px;
+    max-width: 190px;
+}
+
+.containerDiv {
+    display: flex;
+    justify-content:center;
+    flex-flow: row wrap;
+    margin-top: 3px;
 }

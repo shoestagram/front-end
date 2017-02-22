@@ -35,7 +35,27 @@ export class Profile extends React.Component {
               <p><strong>Nickname: </strong> {profile.nickname}</p>
             </div>
           </div>
+          
+      <div className="profileBody">
+        <div className="containerDiv">
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
+          <div className="squareDiv">content goes here</div>
         </div>
+      </div>
+    </div>
     );
   }
 }
