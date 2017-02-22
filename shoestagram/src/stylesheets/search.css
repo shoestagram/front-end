@@ -6,10 +6,10 @@
 
 
   .inputDiv {
-      height: 25px;
+      height: 34px;
       border-width: 0;
-      background-color: rgb(105, 194, 197);
-      color: #FFF;
+      background-color: rgb(164, 222, 224);
+      color: #52276d;
       width: 100%;
       margin-right: -27px;
 
@@ -29,10 +29,10 @@
     }
 
   .searchButton {
-    height: 27px;
-    width: 27px;
-    padding: 1px;
+    height: 36px;
+    width: 40px;
     background-color: #42bec3;
+    color: #FFF;
     cursor: auto;
     border-width: 0;
     border-style: inset;

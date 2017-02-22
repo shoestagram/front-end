@@ -10,11 +10,17 @@ class Navbar extends React.Component {
         <div className="logoDiv">
           <p>SHOESTAGRAM</p>
         </div>
-        <button className="backButton"
-            onClick={browserHistory.goBack}>
-            Back
-        </button>
-          <Search />
+        <div className="searchAndBack">
+          <div className="headerBackButton">
+            <button className="backButton"
+                onClick={browserHistory.goBack}>
+                Back
+            </button>
+          </div>
+          <div className="searchBarDiv">
+            <Search />
+          </div>
+        </div>
     </div>
     );
   }

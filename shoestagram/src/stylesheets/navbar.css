@@ -1,30 +1,60 @@
 
 .headerAll {
     background-color: #52386d;
-    min-height: 80px
+    min-height: 80px;
+    position:absolute;
+    max-width: 600px;
+    width:100%;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+.searchAndBack {
+    /*display: flex;*/
+    display: relative;
+    height: 80px;
+}
+
+.headerBackButton {
+    width: 100px;
+    position: absolute;
+    top:27px;
+    left: 0;
+
+}
+
+.searchBarDiv {
+    position: absolute;
+    top:27px;
+    right: 25px;
+    left: 87px;
+    margin-top: 0.5em;
+
 }
 
 .logoDiv {
-    background-color: #1a1423;
+    background: rgba(26, 20, 35, 0.3);
     height: 25px;
     font-family: 'Poppins', sans-serif;
-    color: white;
 }
 
 .logoDiv p {
     margin: 0;
+    color: white;
 }
 
 .backButton {
-    float: left;
      border: 0;
      background: #42bec3;
      text-shadow: 1px 2px 3px rgba(150, 150, 150, 1);
      color: white;
-     padding: 8px 14px;
+     padding: 8px 12px;
      font-weight: bold;
      font-size: 18px;
-     margin-left: 4%;
-     margin-top: 0.5em;
+     margin-top: 7px;
+     margin-left: -12px;
+
 }
 
