@@ -15,7 +15,6 @@
     line-height: 100%;
     margin:0;
     padding: 3%;
-    margin-top:3%;
     font-weight: 600;
 }
 
@@ -93,4 +92,9 @@
     background-color: red;
     max-width: 600px;
     max-height: 600px;
+}
+
+.likeButton {
+    margin-top:3%;
+    color: #52386d;
 }
