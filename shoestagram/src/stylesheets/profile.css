@@ -1,6 +1,6 @@
 .profilePic {
     border-radius: 50%;
-    margin: auto;
+    margin: auto 4%;
     border: 3px solid #52386d;
 }
 
@@ -18,7 +18,7 @@
     background-color: #ecdded;
 }
 
-.squareDiv {
+.squareLikes {
     height: 30.52vw;
     width: 30.52vw;
     background-color: pink;
@@ -27,7 +27,7 @@
     max-width: 190px;
 }
 
-.containerDiv {
+.containerLikes {
     display: flex;
     justify-content:center;
     flex-flow: row wrap;

@@ -37,22 +37,16 @@ export class Profile extends React.Component {
           </div>
           
       <div className="profileBody">
-        <div className="containerDiv">
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
-          <div className="squareDiv">content goes here</div>
+        <div className="containerLikes">
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
+          <div className="squareLikes">Likes goes here</div>
         </div>
       </div>
     </div>
