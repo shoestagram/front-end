@@ -1,0 +1,47 @@
+.navBarAll {
+    background-color: #52386d;
+    min-height: 80px;
+    position:fixed;
+    max-width: 600px;
+    width:100%;
+    top:0;
+}
+
+.backButtonNoSearch {
+     border: 0;
+     background: #42bec3;
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.81);
+     color: white;
+     padding: 7px 11px;
+     font-weight: bold;
+     font-size: 18px;
+     margin-top: 8px;
+     margin-left: 12px;
+
+}
+
+.logoDivNoSearch {
+    background: rgba(26, 20, 35, 0.5);
+    height: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.logoDivNoSearch p {
+    margin: 0;
+    color: white;
+}
+
+.likeButton {
+    color: #42bec3;
+    display: block;
+    margin: auto;
+    margin-right: 5%;
+    padding-top: 2%;
+}
+
+.bottomBar {
+    display: flex;
+    margin: auto;
+}

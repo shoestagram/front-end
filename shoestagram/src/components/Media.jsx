@@ -1,9 +1,7 @@
 import React from 'react';
 import '../stylesheets/media.css';
-// import Footer from './Footer';
-// import Navbar from './Navbar';
-// import '../stylesheets/navbar.css';
-// import 'App.css';
+import NavNoSearch from './NavNoSearch';
+
 
 //to change Like button on click <i className="fa fa-thumbs-up" aria-hidden="true"></i>
 
@@ -13,8 +11,8 @@ class Media extends React.Component {
   render() {
     return (
       <div className="mediaAll">
+      <NavNoSearch />
           <div className="mediaJumboPic">JumboImage Goes Here </div>
-          <div className="likeButton"><i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i></div>
           <h2 className="headerStyle">PRODUCT DESCRIPTION GOES HERE SUPER LONG TEST WOWOWOWOWO</h2>
           <p className="parStyle">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
