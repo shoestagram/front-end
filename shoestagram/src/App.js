@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         <Navbar onSearch={this._onSearch} />
             <main className="main-content">
-                <Home search={this.state.searchTerm} />
+                <Home search={this.state.searchTerm} auth={this.props.route.auth}/>
             </main>
         <Footer />
       </div>

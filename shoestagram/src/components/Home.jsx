@@ -11,6 +11,9 @@ class Home extends React.Component {
   }
 
   fetchData = () => {
+      // This is the user ID
+      var user_id = this.props.auth.getProfile().clientID
+
 
       this.setState({
           loading: true,
@@ -28,7 +31,12 @@ class Home extends React.Component {
       console.log(url);
 
 
-      fetch(url)
+      fetch(url, {
+      	headers: new Headers({
+      		'Content-Type': 'application/x-www-form-urlencoded',
+          'X-User-ID': user_id
+      	})
+      })
       .then(response => response.json())
       .then(function(data){
               this.setState({
@@ -56,8 +64,8 @@ class Home extends React.Component {
         <div className="containerDiv">
           {this.state.media.map(function(item, i){
             return(
-              <div>
-                <img className="squareDiv" key={item.id} src={item.media_url} alt=""/>
+              <div key={item.id} >
+                <img className="squareDiv" src={item.media_url} alt=""/>
               </div>
             )
           })}
