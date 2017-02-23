@@ -17,13 +17,8 @@ class Search extends React.Component {
   render() {
     return (
       <div className="searchBox">
-<<<<<<< HEAD
         <form onSubmit={this._handleSubmit.bind(this)}>
           <input ref="userInput" type="text" placeholder="Search here..." className="inputDiv" />
-=======
-
-          <input type="text" placeholder="" className="inputDiv" />
->>>>>>> f0e96a544682653bc96be4ccb6e0ecaf617494d3
           <button className="searchButton">
             <i className="fa fa-search" aria-hidden="true"></i>
           </button>
