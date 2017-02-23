@@ -11,7 +11,7 @@ export class Login extends React.Component {
   }
 
   render() {
-    const { auth } = this.props;
+    const { auth } = this.props.route;
     return (
       <div className="loginContainer">
         <h2 className="loginText">Click To Proceed</h2>

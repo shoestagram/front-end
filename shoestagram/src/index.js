@@ -23,10 +23,10 @@ const requireAuth = (nextState, replace) => {
 
 const routes = (
     <Router history={ browserHistory }>
-        <Route path="/" component={ App } auth={auth} />
-        <Route path="/login" component={ Login } />
-        <Route path="/profile" component={ Profile } onEnter={requireAuth} />
-        <Route path="/media" component={ Media } onEnter={requireAuth} />
+        <Route path="/" component={ App } onEnter={requireAuth} auth={auth} />
+        <Route path="/login" component={ Login } auth={auth} />
+        <Route path="/profile" component={ Profile } onEnter={requireAuth} auth={auth} />
+        <Route path="/media" component={ Media } onEnter={requireAuth} auth={auth} />
     </Router>
 );
 
@@ -34,4 +34,3 @@ ReactDOM.render(
   routes,
   document.getElementById('root')
 );
-

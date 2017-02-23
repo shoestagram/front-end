@@ -15,10 +15,10 @@ export class Profile extends React.Component {
     super(props, context);
     console.log(props);
     this.state = {
-      profile: props.auth.getProfile()
+      profile: props.route.auth.getProfile()
     };
     //listen to profile_updated events to update internal state
-    props.auth.on('profile_updated', (newProfile) => {
+    props.route.auth.on('profile_updated', (newProfile) => {
       this.setState({profile: newProfile});
     });
   }
@@ -35,7 +35,7 @@ export class Profile extends React.Component {
               <p><strong>Nickname: </strong> {profile.nickname}</p>
             </div>
           </div>
-          
+
       <div className="profileBody">
         <div className="containerLikes">
           <div className="squareLikes">Likes goes here</div>
