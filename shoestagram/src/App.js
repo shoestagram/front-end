@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   _onSearch = (searchTerm) => {
-    this.setState({ searchTerm: searchTerm })
+    this.setState({ searchTerm: searchTerm });
   }
 
   render() {
