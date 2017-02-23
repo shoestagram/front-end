@@ -8,7 +8,7 @@
 }
 
 .containerDiv {
-    background-color: green;
+    background-color: white;
     display: flex;
     justify-content:center;
     flex-flow: row wrap;

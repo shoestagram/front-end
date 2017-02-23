@@ -18,7 +18,7 @@ class Navbar extends React.Component {
             </button>
           </div>
           <div className="searchBarDiv">
-            <Search />
+            <Search onSearch={this.props.onSearch} />
           </div>
         </div>
     </div>
