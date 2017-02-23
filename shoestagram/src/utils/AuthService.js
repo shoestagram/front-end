@@ -8,7 +8,11 @@ export default class AuthService extends EventEmitter {
     // Configure Auth0
     this.lock = new Auth0Lock(clientId, domain, {
       auth: {
+<<<<<<< HEAD
         redirectUrl: 'https://frontend-allendecodemtl.c9users.io/login',
+=======
+        redirectUrl: 'https://shoestagram-coco-moloko.c9users.io/login',
+>>>>>>> f0e96a544682653bc96be4ccb6e0ecaf617494d3
         responseType: 'token'
       }
     })
