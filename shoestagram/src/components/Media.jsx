@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/media.css';
+// import Footer from './Footer';
 // import Navbar from './Navbar';
 // import '../stylesheets/navbar.css';
 // import 'App.css';
@@ -41,6 +42,8 @@ class Media extends React.Component {
         </div>
         
         <div className="googleMapsContainer"> Map container goes here</div>
+        
+        
       </div>
     );
   }
