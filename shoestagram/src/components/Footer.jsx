@@ -11,19 +11,19 @@ class Footer extends React.Component {
     return (
     <div className="footerAll">
       <div className="iconsAll">
-        <div className="homeDiv iconDiv" >
+      
+        <div className="homeDiv" >
           <Link to={`/`}>
            <i className="fa fa-home fa-2x" aria-hidden="true"></i>
           </Link>
         </div>
-        <div className="cartDiv iconDiv">
-          <i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
-        </div>
-        <div className="profileDiv iconDiv">
+
+        <div className="profileDiv">
           <Link to={`/profile`}>
             <i className="fa fa-user fa-2x" aria-hidden="true"></i>
          </Link>
         </div>
+        
       </div>
     </div>
     );

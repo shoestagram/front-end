@@ -4,13 +4,12 @@
     min-height: 80px;
     position:fixed;
     max-width: 600px;
-    width:100%;
+    width:99%;
     top:0;
     height: 80px;
 }
 
 .searchAndBack {
-    /*display: flex;*/
     display: relative;
     height: 80px;
 }
