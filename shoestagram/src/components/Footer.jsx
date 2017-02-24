@@ -1,6 +1,6 @@
 import React from 'react';
 import '../stylesheets/footer.css';
-// import { Link } from 'react-router'
+import { Link } from 'react-router';
 
         // <div className="cartDiv iconDiv">
         //   <i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
@@ -12,13 +12,17 @@ class Footer extends React.Component {
     <div className="footerAll">
       <div className="iconsAll">
         <div className="homeDiv iconDiv" >
-         <i className="fa fa-home fa-3x" aria-hidden="true"></i>
+          <Link to={`/`}>
+           <i className="fa fa-home fa-2x" aria-hidden="true"></i>
+          </Link>
         </div>
         <div className="cartDiv iconDiv">
-          <i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+          <i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
         </div>
         <div className="profileDiv iconDiv">
-          <i className="fa fa-user fa-3x" aria-hidden="true"></i>
+          <Link to={`/profile`}>
+            <i className="fa fa-user fa-2x" aria-hidden="true"></i>
+         </Link>
         </div>
       </div>
     </div>

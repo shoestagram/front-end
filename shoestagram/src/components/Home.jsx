@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/home.css';
+import { Link } from 'react-router';
 
 class Home extends React.Component {
   
@@ -12,7 +13,7 @@ class Home extends React.Component {
 
   fetchData = () => {
       // This is the user ID
-      var user_id = this.props.auth.getProfile().clientID
+      var user_id = this.props.auth.getProfile().user_id;
 
 
       this.setState({
@@ -64,9 +65,11 @@ class Home extends React.Component {
         <div className="containerDiv">
           {this.state.media.map(function(item, i){
             return(
-              <div key={item.id} >
-                <img className="squareDiv" src={item.media_url} alt=""/>
-              </div>
+              <Link to={`/media/${item.id}`}>
+                <div>
+                  <img className="squareDiv" key={item.id} src={item.media_url} alt=""/>
+                </div>
+              </Link>
             )
           })}
         </div>

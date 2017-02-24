@@ -17,7 +17,9 @@ export class Profile extends React.Component {
     super(props, context);
     console.log(props);
     this.state = {
-      profile: props.route.auth.getProfile()
+      profile: props.route.auth.getProfile(),
+      media:[]
+      
     };
     //listen to profile_updated events to update internal state
     props.route.auth.on('profile_updated', (newProfile) => {
@@ -25,9 +27,43 @@ export class Profile extends React.Component {
     });
   }
 
+  fetchData = () => {
+      // This is the user ID
+      const { profile } = this.state;
+      var user_id = profile.user_id;
+      
+      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/profile`
+      
+      fetch(url, {
+      	headers: new Headers({
+      		'Content-Type': 'application/x-www-form-urlencoded',
+          'X-User-ID': user_id
+      	})
+      })
+      .then(response => response.json())
+      .then(function(data){
+              this.setState({
+                  media: data
+              });
+          }.bind(this)
+      );
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    if (this.props.search !== prevProps.search){
+      this.fetchData();
+    }
+  }
+
+  componentDidMount(){
+    this.fetchData();
+  }
+
+
   render() {
     const { profile } = this.state;
-    console.log(profile);
+    //console.log(profile);
+    
     return (
         <div className="profileAll">
         <NavNoSearch />
@@ -41,15 +77,13 @@ export class Profile extends React.Component {
 
       <div className="profileBody">
         <div className="containerLikes">
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
-          <div className="squareLikes">Likes goes here</div>
+           {this.state.media.map(function(item, i){
+            return(
+              <div>
+                <img className="squareLikes" key={item.id} src={item.media_url} alt=""/>
+              </div>
+            )
+          })}
         </div>
       </div>
       <Footer />
