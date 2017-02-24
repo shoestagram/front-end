@@ -2,6 +2,7 @@ import React from 'react';
 import '../stylesheets/media.css';
 import NavNoSearch from './NavNoSearch';
 import Footer from './Footer';
+import GMap from './GMap';
 
 
 //to change Like button on click <i className="fa fa-thumbs-up" aria-hidden="true"></i>
@@ -114,7 +115,7 @@ class Media extends React.Component {
         </div>
          
         
-        <div className="googleMapsContainer"> Map container goes here</div>
+        <div className="googleMapsContainer"><GMap /></div>
         
         <Footer />
       </div>
