@@ -47,7 +47,6 @@ class Media extends React.Component {
       
       var media_id = this.props.params.id;
       
-      
       var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/shoplinks/${media_id}`
       console.log(url);
 
@@ -70,7 +69,12 @@ class Media extends React.Component {
   }
   
   render() {
+    var media_id = this.props.params.id;
+    var user_id = this.props.route.auth.getProfile().user_id;
+      
+    
     return (
+      
       <div className="mediaAll">
       <NavNoSearch />
           <div className="mediaJumboPic">
