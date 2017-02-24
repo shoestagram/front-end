@@ -13,6 +13,7 @@ class Home extends React.Component {
 
   fetchData = () => {
       // This is the user ID
+      // This is the user ID
       var user_id = this.props.auth.getProfile().user_id;
 
 
