@@ -71,12 +71,11 @@ class Media extends React.Component {
   render() {
     var media_id = this.props.params.id;
     var user_id = this.props.route.auth.getProfile().user_id;
-      
     
     return (
       
       <div className="mediaAll">
-      <NavNoSearch />
+      <NavNoSearch m_id={media_id} u_id={user_id}/>
           <div className="mediaJumboPic">
             <img className="mediaJumboPic" src={this.state.media[0].media_url} key={this.state.media[0].id} alt=""/>
           </div>
