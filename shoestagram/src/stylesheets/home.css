@@ -1,17 +1,18 @@
 .squareDiv {
     height: 30.52vw;
     width: 30.52vw;
-    background-color: pink;
     margin: 3px;
     max-height: 190px;
     max-width: 190px;
 }
 
+.squareDiv img {
+    max-height: 230px;
+    max-width: 230px;
+}
+
 .containerDiv {
-<<<<<<< HEAD
     background-color: white;
-=======
->>>>>>> f0e96a544682653bc96be4ccb6e0ecaf617494d3
     display: flex;
     justify-content:center;
     flex-flow: row wrap;
