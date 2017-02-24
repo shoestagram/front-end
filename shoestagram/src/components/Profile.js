@@ -1,6 +1,8 @@
 import React, { PropTypes as T } from 'react';
 import AuthService from '../utils/AuthService';
 import '../stylesheets/profile.css';
+import NavNoSearch from './NavNoSearch';
+import Footer from './Footer';
 
 export class Profile extends React.Component {
   static contextTypes = {
@@ -28,6 +30,7 @@ export class Profile extends React.Component {
     console.log(profile);
     return (
         <div className="profileAll">
+        <NavNoSearch />
           <div className="profileRow">
              <img className="profilePic" src={profile.picture} alt="Your profile" />
              <div className="textAll">
@@ -49,6 +52,7 @@ export class Profile extends React.Component {
           <div className="squareLikes">Likes goes here</div>
         </div>
       </div>
+      <Footer />
     </div>
     );
   }

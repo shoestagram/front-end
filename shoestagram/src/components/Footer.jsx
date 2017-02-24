@@ -2,6 +2,10 @@ import React from 'react';
 import '../stylesheets/footer.css';
 // import { Link } from 'react-router'
 
+        // <div className="cartDiv iconDiv">
+        //   <i className="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+        // </div>
+
 class Footer extends React.Component {
   render() {
     return (

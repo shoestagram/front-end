@@ -1,7 +1,8 @@
 .mediaAll {
     max-width: 600px;
     margin:auto;
-    margin-top: 80px;
+    margin-top: 85px;
+    margin-bottom: 55px;
 }
 
 .mediaJumboPic {
@@ -16,10 +17,8 @@
 .headerStyle {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    /*background-color: red;*/
     text-overflow:auto;
     line-height: 100%;
-    margin:0;
     padding: 3%;
     font-weight: 600;
 }
