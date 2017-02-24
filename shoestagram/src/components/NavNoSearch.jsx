@@ -3,6 +3,7 @@ import { browserHistory } from 'react-router';
 import '../stylesheets/navnosearch.css';
 
 class NavNoSearch extends React.Component {
+
   render() {
     return (
       <div className="navBarAll">
@@ -14,7 +15,9 @@ class NavNoSearch extends React.Component {
                 onClick={browserHistory.goBack}>
                 Back
             </button>
-            <div className="likeButton"><i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i></div>
+            <div className="likeButton">
+              <i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+            </div>
           </div>
       </div> 
     );

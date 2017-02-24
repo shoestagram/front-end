@@ -8,15 +8,83 @@ import Footer from './Footer';
 
 class Media extends React.Component {
   
+    constructor() {
+      super();
+      this.state = {
+        media:[{
+          media_url:""
+        }],
+        shoplinks:[{
+          description:""
+        }]
+      };
+  }
+
+  fetchSingleImage = () => {
+      
+      var media_id = this.props.params.id;
+      
+      this.setState({
+          loading: true,
+      });
+
+     
+      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/media/${media_id}`
+      console.log(url);
+
+
+      fetch(url)
+      .then(response => response.json())
+      .then(function(data){
+              this.setState({
+                  media: data
+              });
+          }.bind(this)
+      );
+  }
+  
+  fetchShopLinks = () => {
+      
+      var media_id = this.props.params.id;
+      
+      
+      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/shoplinks/${media_id}`
+      console.log(url);
+
+
+      fetch(url)
+      .then(response => response.json())
+      .then(function(data){
+              this.setState({
+                  shoplinks: data
+              });
+              
+          }.bind(this)
+      );
+  }
+
+
+  componentDidMount(){
+    this.fetchSingleImage();
+    this.fetchShopLinks();
+  }
   
   render() {
     return (
       <div className="mediaAll">
       <NavNoSearch />
-          <div className="mediaJumboPic">JumboImage Goes Here </div>
-          <h2 className="headerStyle">PRODUCT DESCRIPTION GOES HERE SUPER LONG TEST WOWOWOWOWO</h2>
-          <p className="parStyle">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          <div className="mediaJumboPic">
+            <img className="mediaJumboPic" src={this.state.media[0].media_url} key={this.state.media[0].id} alt=""/>
+          </div>
+          
+          <h2 className="headerStyle">
+            {this.state.media[0].text}
+          </h2>
+          <p className="parStyle">
+            {this.state.media[0].keyword}
           </p>
+          
+          
       <div className="buttonRow">
           <div className="buyOnline">Buy Online</div>
           <div className="buyInStore">Buy In-Store</div>
@@ -25,20 +93,23 @@ class Media extends React.Component {
         <div className="accordionLinks">
             <div className="linkDiv">
                   <div className="words">
-                    <p className="productName">from Provider goes here blah blah blah super long just in case wow its still going I cantfdsf fdfsdf fdfs</p>
+                    {this.state.shoplinks.map(function(item, i){
+                      return(
+                        
+                        <a href={item.url}>
+                          <div>
+                            {item.source}
+                            {item.description}
+                            <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
+                            {item.price}
+                          </div>
+                        </a>
+                      )
+                    })}
                   </div>
-                <h3 className="priceDiv">$200</h3>
-                <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
             </div>
         </div>
-          <div className="accordionLinks">
-            <div className="linkDiv">
-                  <div className="words">
-                    <p className="productName">from Ebay</p>
-                  </div>
-                <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
-            </div>
-        </div>
+         
         
         <div className="googleMapsContainer"> Map container goes here</div>
         

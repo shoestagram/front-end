@@ -41,7 +41,8 @@ class Home extends React.Component {
       .then(response => response.json())
       .then(function(data){
               this.setState({
-                  media: this.state.media.concat(data),
+                  //media: this.state.media.concat(data),
+                  media: data
               });
           }.bind(this)
       );
@@ -49,9 +50,9 @@ class Home extends React.Component {
 
   componentDidUpdate(prevProps, prevState){
     if (this.props.search !== prevProps.search){
-      this.setState({
-          media: [],
-      });
+      // this.setState({
+      //     media: [],
+      // });
       this.fetchData();
     }
   }
