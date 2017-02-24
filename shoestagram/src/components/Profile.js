@@ -3,6 +3,8 @@ import AuthService from '../utils/AuthService';
 import '../stylesheets/profile.css';
 import NavNoSearch from './NavNoSearch';
 import Footer from './Footer';
+import { Link } from 'react-router';
+
 
 export class Profile extends React.Component {
   static contextTypes = {
@@ -79,9 +81,12 @@ export class Profile extends React.Component {
         <div className="containerLikes">
            {this.state.media.map(function(item, i){
             return(
+            <Link to={`/media/${item.id}`}>
+                
               <div>
                 <img className="squareLikes" key={item.id} src={item.media_url} alt=""/>
               </div>
+            </Link>
             )
           })}
         </div>
