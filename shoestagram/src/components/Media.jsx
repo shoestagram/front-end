@@ -108,8 +108,9 @@ class Media extends React.Component {
                 <div>
                   {item.source}
                   {item.description}
-                  <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
+                  <br />
                   {item.price}
+                  <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
                 </div>
               </a>
             )
