@@ -92,13 +92,13 @@ class LogoFull extends mojs.CustomShape {
 
 const Burst = React.createClass({
   render() {
-    return (<div className="logoReveal"></div>);
+    return (<div className="logoReveal" ref="logo"></div>);
   },
 
 
   componentDidMount () {
     this._burst = new mojs.Burst({
-      parent:   this.root,
+      parent:   this.refs.logo,
       radius:   { 4: 49 },
       angle:    45,
       count:    12,
@@ -116,6 +116,7 @@ const Burst = React.createClass({
     }).play();
 
       new mojs.Shape({
+        parent:   this.refs.logo,
       shape:  			'circle',
       scale:   			{ 0 : 1.5, easing: 'cubic.out' },
       fill:         { '#FFF': '#362648', easing: 'cubic.out' },
@@ -126,6 +127,7 @@ const Burst = React.createClass({
 
 
         this.logoFull = new mojs.Shape({
+          parent:   this.refs.logo,
             shape:    'logoFull',
             height : 600,
             width: 1000,

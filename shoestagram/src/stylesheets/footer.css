@@ -10,8 +10,8 @@
     justify-content: center;
 }
 
-.fa-2x {
-      color: #1a1423;
+.profileDiv a {
+    color: rgb(26, 20, 35);
 }
 
 .iconsAll {
@@ -26,4 +26,8 @@
 .homeDiv {
    margin-right: 50px;
    padding: 2px 8px;
+}
+
+.homeDiv a {
+   color: rgb(26, 20, 35); 
 }

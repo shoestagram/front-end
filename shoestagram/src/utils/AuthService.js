@@ -8,8 +8,8 @@ export default class AuthService extends EventEmitter {
     // Configure Auth0
     this.lock = new Auth0Lock(clientId, domain, {
       auth: {
-        redirectUrl: 'http://localhost:3000/login',
-        //redirectUrl: 'https://frontend-allendecodemtl.c9users.io/login',
+        // redirectUrl: 'http://localhost:3000/login',
+        redirectUrl: 'https://shoestagram-coco-moloko.c9users.io/login',
         responseType: 'token'
       }
     })
@@ -79,5 +79,6 @@ export default class AuthService extends EventEmitter {
     logout() {
       // Clear user token from local storage
       localStorage.removeItem('id_token');
+      browserHistory.replace('/login')
     }
 }

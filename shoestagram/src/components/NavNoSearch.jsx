@@ -46,7 +46,9 @@ class NavNoSearch extends React.Component {
                 <div className="likeButton" onClick={this._handleSubmit.bind(this)}>
                   <i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
                </div> 
-                : null }
+                : <div className="logoutButton" onClick={this.props.auth.logout.bind(this)}>
+                  <i className="fa fa-sign-out fa-2x"></i>
+               </div>  }
           </div>
       </div> 
     );

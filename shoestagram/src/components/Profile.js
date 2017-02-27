@@ -68,7 +68,7 @@ export class Profile extends React.Component {
     
     return (
         <div className="profileAll">
-        <NavNoSearch hideLikeBtn="{true}" />
+        <NavNoSearch hideLikeBtn="{true}" auth={this.props.route.auth}/>
           <div className="profileRow">
              <img className="profilePic" src={profile.picture} alt="Your profile" />
              <div className="textAll">
