@@ -98,7 +98,10 @@
 Collapsible section for Buy Online and Buy In Store
 
 */
-
+/*.buttons {
+    display: flex;
+}
+*/
 .Collapsible {
   background-color: white;
   text-align: center; }
