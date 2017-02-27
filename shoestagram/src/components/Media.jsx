@@ -92,7 +92,7 @@ class Media extends React.Component {
           </p>
          
         
-      <div>
+      <div className="buttons">
 
         <Collapsible lazyRender 
         transitionTime={600} 
@@ -103,7 +103,6 @@ class Media extends React.Component {
         triggerOpenedClassName="CustomTriggerCSS--open">        
           {this.state.shoplinks.map(function(item, i){
             return(
-              
               <a href={item.url}>
                 <div>
                   {item.source}
