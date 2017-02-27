@@ -1,7 +1,7 @@
 .footerAll {
     background-color: #42bec3;
     width:100%;
-    min-height: 45px;
+    min-height: 40px;
     max-width: 600px;
     position:fixed;
     bottom:0px;
@@ -10,29 +10,20 @@
     justify-content: center;
 }
 
-.homeDiv {
-    color: #1a1423;
-}
-
-.cartDiv {
-    color: #1a1423;
-}
-
-.profileDiv {
-    color: #1a1423;
-    
+.fa-2x {
+      color: #1a1423;
 }
 
 .iconsAll {
     display: flex;
 }
 
-.iconDiv {
-    min-width: 90px;
-    margin-right: 10px;
+.profileDiv {
+   margin-left: 50px;
+   padding: 2px 8px;
 }
 
-.iconDiv:last-child {
-    margin-right: 0px;
-    
+.homeDiv {
+   margin-right: 50px;
+   padding: 2px 8px;
 }

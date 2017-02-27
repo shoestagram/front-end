@@ -10,37 +10,37 @@ Every functional element of the app is divided up into components so that we can
 
 The Home.jsx page is located at URL + '/'. This page is where the images from the database are displayed to the user.
 ###### Files used: ######
-Home.jsx
-home.css
-Navbar.jsx
-navbar.css
-Footer.jsx
-footer.css
+* Home.jsx
+* home.css
+* Navbar.jsx
+* navbar.css
+* Footer.jsx
+* footer.css
 
 ## Media
 
 The Media.jsx is located at URL + '/media'. This page is really the sole(haha) of the app. It displays the image that the user clicked in jumbo format, as well as some product information that is relevant to the customer. It also houses the links for the customer to buy the product online or in-store. The in-store feature reveals a Google Map which displays the user's location and a route to the nearest sneaker store of their choice.
 ###### Files used: ######
-Media.jsx
-media.css
-NavNoSearch.jsx
-navnosearch.css
-Footer.jsx
-Footer.css
-GMap.jsx
+* Media.jsx
+* media.css
+* NavNoSearch.jsx
+* navnosearch.css
+* Footer.jsx
+* Footer.css
+* GMap.jsx
 
 
 ## Profile
 
 The Profile.jsx page is located at URL + '/profile'. This page displays the Username and avatar of the user linked to their Facebook account. This page is where the user can see all of the images they’ve liked in the app, so that they can revisit them and maybe make purchases later.
 ###### Files used: ######
-Profile.jsx
-profile.css
-NavNoSearch.jsx
-navnosearch.css
-Footer.jsx
-Footer.css
-GMap.jsx
+* Profile.jsx
+* profile.css
+* NavNoSearch.jsx
+* navnosearch.css
+* Footer.jsx
+* Footer.css
+* GMap.jsx
 
 # Other Components
 

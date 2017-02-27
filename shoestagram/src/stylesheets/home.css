@@ -4,11 +4,14 @@
     margin: 3px;
     max-height: 190px;
     max-width: 190px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-.squareDiv img {
-    max-height: 230px;
-    max-width: 230px;
+.squareDivImg {
+    height: 100%;
+    width: inherit;
 }
 
 .containerDiv {
