@@ -1,4 +1,7 @@
 import React from 'react';
+import Collapsible from 'react-collapsible';
+
+
 import '../stylesheets/media.css';
 import NavNoSearch from './NavNoSearch';
 import Footer from './Footer';
@@ -87,35 +90,44 @@ class Media extends React.Component {
           <p className="parStyle">
             {this.state.media[0].keyword}
           </p>
-          
-          
-      <div className="buttonRow">
-          <div className="buyOnline">Buy Online</div>
-          <div className="buyInStore">Buy In-Store</div>
-      </div>
-      
-        <div className="accordionLinks">
-            <div className="linkDiv">
-                  <div className="words">
-                    {this.state.shoplinks.map(function(item, i){
-                      return(
-                        
-                        <a href={item.url}>
-                          <div>
-                            {item.source}
-                            {item.description}
-                            <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
-                            {item.price}
-                          </div>
-                        </a>
-                      )
-                    })}
-                  </div>
-            </div>
-        </div>
          
         
-        <div className="googleMapsContainer"><GMap /></div>
+      <div className="buttons">
+
+        <Collapsible lazyRender 
+        transitionTime={600} 
+        trigger="Buy Online" 
+        easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} 
+        overflowWhenOpen="visible"
+        triggerClassName="CustomTriggerCSS"
+        triggerOpenedClassName="CustomTriggerCSS--open">        
+          {this.state.shoplinks.map(function(item, i){
+            return(
+              <a href={item.url}>
+                <div>
+                  {item.source}
+                  {item.description}
+                  <br />
+                  {item.price}
+                  <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
+                </div>
+              </a>
+            )
+          })}
+        </Collapsible>
+
+        <Collapsible lazyRender
+        transitionTime={400} 
+        trigger="Buy In Store" 
+        easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'}
+        triggerClassName="CustomTriggerCSS"
+        triggerOpenedClassName="CustomTriggerCSS--open">
+          <div className="map-box">
+            <GMap />
+          </div>
+        </Collapsible>
+
+      </div>  
         
         <Footer />
       </div>

@@ -68,7 +68,7 @@ export class Profile extends React.Component {
     
     return (
         <div className="profileAll">
-        <NavNoSearch />
+        <NavNoSearch hideLikeBtn="{true}" />
           <div className="profileRow">
              <img className="profilePic" src={profile.picture} alt="Your profile" />
              <div className="textAll">

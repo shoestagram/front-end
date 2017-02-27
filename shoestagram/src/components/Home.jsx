@@ -29,7 +29,7 @@ class Home extends React.Component {
         temp = this.props.search;
       }
 
-      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/search?key=%${temp}%`;
+      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/search?key=%${temp}%`
       console.log(url);
 
 
@@ -68,8 +68,8 @@ class Home extends React.Component {
           {this.state.media.map(function(item, i){
             return(
               <Link to={`/media/${item.id}`}>
-                <div className="squareDiv">
-                  <img className="squareDivImg" key={item.id} src={item.media_url} alt=""/>
+                <div>
+                  <img className="squareDiv" key={item.id} src={item.media_url} alt=""/>
                 </div>
               </Link>
             )

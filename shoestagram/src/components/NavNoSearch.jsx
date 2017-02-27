@@ -42,9 +42,11 @@ class NavNoSearch extends React.Component {
                 onClick={browserHistory.goBack}>
                 Back
             </button>
-            <div className="likeButton" onClick={this._handleSubmit.bind(this)}>
-              <i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
-            </div>
+            {!this.props.hideLikeBtn ?
+                <div className="likeButton" onClick={this._handleSubmit.bind(this)}>
+                  <i className="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+               </div> 
+                : null }
           </div>
       </div> 
     );
