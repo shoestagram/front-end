@@ -1,5 +1,6 @@
 import React from 'react';
 import Collapsible from 'react-collapsible';
+import Scroll from 'react-scroll';
 
 
 import '../stylesheets/media.css';
@@ -7,6 +8,8 @@ import NavNoSearch from './NavNoSearch';
 import Footer from './Footer';
 import GMap from './GMap';
 
+
+var scroll = Scroll.animateScroll;
 
 //to change Like button on click <i className="fa fa-thumbs-up" aria-hidden="true"></i>
 
@@ -22,6 +25,9 @@ class Media extends React.Component {
           description:""
         }]
       };
+
+      this.scrollMore = this.scrollMore.bind(this);
+      this.scrollToBottom = this.scrollToBottom.bind(this);
   }
 
   fetchSingleImage = () => {
@@ -71,6 +77,15 @@ class Media extends React.Component {
     this.fetchSingleImage();
     this.fetchShopLinks();
   }
+
+  scrollToBottom() {
+    scroll.scrollToBottom();
+  }
+
+  scrollMore() {
+    scroll.scrollMore(300);
+    //onClick, the collapsible window will scroll 300px UP from where it was
+  }
   
   render() {
     var media_id = this.props.params.id;
@@ -94,38 +109,42 @@ class Media extends React.Component {
         
       <div className="buttons">
 
-        <Collapsible lazyRender 
-        transitionTime={600} 
-        trigger="Buy Online" 
-        easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} 
-        overflowWhenOpen="visible"
-        triggerClassName="CustomTriggerCSS"
-        triggerOpenedClassName="CustomTriggerCSS--open">        
-          {this.state.shoplinks.map(function(item, i){
-            return(
-              <a href={item.url}>
-                <div>
-                  {item.source}
-                  {item.description}
-                  <br />
-                  {item.price}
-                  <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
-                </div>
-              </a>
-            )
-          })}
-        </Collapsible>
+        <a onClick={this.scrollMore}>
+          <Collapsible lazyRender 
+          transitionTime={600} 
+          trigger="Buy Online" 
+          easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} 
+          overflowWhenOpen="visible"
+          triggerClassName="CustomTriggerCSS"
+          triggerOpenedClassName="CustomTriggerCSS--open">        
+            {this.state.shoplinks.map(function(item, i){
+              return(
+                <a href={item.url}>
+                  <div>
+                    {item.source}
+                    {item.description}
+                    <br />
+                    {item.price}
+                    <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
+                  </div>
+                </a>
+              )
+            })}
+          </Collapsible>
+        </a>
 
-        <Collapsible lazyRender
-        transitionTime={400} 
-        trigger="Buy In Store" 
-        easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'}
-        triggerClassName="CustomTriggerCSS"
-        triggerOpenedClassName="CustomTriggerCSS--open">
-          <div className="map-box">
-            <GMap />
-          </div>
-        </Collapsible>
+        <a onClick={this.scrollToBottom}>
+          <Collapsible lazyRender
+          transitionTime={400} 
+          trigger="Buy In Store" 
+          easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'}
+          triggerClassName="CustomTriggerCSS"
+          triggerOpenedClassName="CustomTriggerCSS--open">
+            <div className="map-box">
+              <GMap />
+            </div>
+          </Collapsible>
+        </a>
 
       </div>  
         
