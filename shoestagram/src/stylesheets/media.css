@@ -8,9 +8,13 @@
 .mediaJumboPic {
     height: 80vw;
     width: 100vw;
-    background-color: blue;
+    background-color: white;
     max-width: 600px;
     max-height: 600px;
+}
+
+.mediaJumboPic img {
+  height: 100%;
 }
 
 
@@ -27,7 +31,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     padding: 0 3%;
-    /*background-color: purple;*/
+    color: #282828;
 }
 
 /*.buttonRow {
