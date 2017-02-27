@@ -98,10 +98,7 @@
 Collapsible section for Buy Online and Buy In Store
 
 */
-/*.buttons {
-    display: flex;
-}
-*/
+
 .Collapsible {
   background-color: white;
   text-align: center; }
@@ -159,7 +156,7 @@ Collapsible section for Buy Online and Buy In Store
   .map-box {
     width: 300px;
     height: 300px;
-    border: 1px solid red;
+    border: 1px solid #42bec4;
     margin: 0 auto;
     margin-bottom: 20px;
   }
