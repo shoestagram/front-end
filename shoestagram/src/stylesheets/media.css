@@ -151,6 +151,7 @@ Collapsible section for Buy Online and Buy In Store
 .linkButton {
   color: #42bec3;
 }
+
 /* Medium and up screen sizes */
 
 @media only screen and (min-width: 641px) {

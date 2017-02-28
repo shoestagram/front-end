@@ -110,9 +110,8 @@ class Media extends React.Component {
             {this.state.media[0].keyword}
           </p>
          
-        
-      <div className="buttonOnline">
-
+      
+      {this.state.shoplinks[0] ? (<div className="buttonOnline">   
         <a onClick={this.scrollMore}>
           <Collapsible lazyRender 
           transitionTime={600} 
@@ -137,7 +136,7 @@ class Media extends React.Component {
             })}
           </Collapsible>
         </a>
-    </div>
+    </div>) : null}
 
     <div className="buttonInStore">
         <a onClick={this.scrollToBottom}>
