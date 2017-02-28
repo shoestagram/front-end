@@ -27,6 +27,9 @@ class Home extends React.Component {
           temp = "";
       } else {
         temp = this.props.search;
+
+        temp = escape(temp).replace("20", "");
+        //this allows us to convert any search user enters with spaces to proper query to our endpoint (i.e. "nike air" becomes "nike%air")
       }
 
       var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/search?key=%${temp}%`;
