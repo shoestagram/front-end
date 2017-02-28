@@ -6,7 +6,7 @@
 }
 
 .mediaJumboPic {
-    height: 80vw;
+    height: 85vw;
     width: 100vw;
     background-color: white;
     max-width: 600px;
@@ -15,6 +15,7 @@
 
 .mediaJumboPic img {
   height: 100%;
+  width: inherit;
 }
 
 
@@ -108,11 +109,11 @@ Collapsible section for Buy Online and Buy In Store
   text-align: center; }
 
 .Collapsible__contentInner {
-  padding: 10px;
-  border: 1px solid #ebebeb;
-  border-top: 0; }
+  padding: 0 10px;
+ }
+ 
   .Collapsible__contentInner p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 14px;
     line-height: 20px; }
     .Collapsible__contentInner p:last-child {
@@ -147,6 +148,7 @@ Collapsible section for Buy Online and Buy In Store
   transition: background-color 200ms ease;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  cursor: pointer;
 }
 
 .CustomTriggerCSS--open {
@@ -191,3 +193,30 @@ Collapsible section for Buy Online and Buy In Store
 
 }
 
+.linkedContent {
+  background-color: rgb(164, 222, 224);
+  padding: 3%;
+  display: flex;
+  border: 2px solid #42bec3;
+  max-height: 75px;
+  text-overflow: ellipsis;
+}
+
+.Collapsible__contentInner a {
+  color: #191919;
+  text-decoration: none;
+  margin-right: 2%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.priceLink {
+  font-family: "Poppins", "sans-serif";
+  font-weight: bold;
+  text-align: left;
+  padding: 0 2%;
+  margin-top: 5px;
+}
+
+.linkButton {
+  color: #42bec3;
+}

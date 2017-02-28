@@ -7,12 +7,11 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.squareDivImg {
-    height: 100%;
-    width: inherit;
-}
 
 .containerDiv {
     background-color: white;

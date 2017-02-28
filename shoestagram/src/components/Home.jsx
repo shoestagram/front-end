@@ -68,8 +68,7 @@ class Home extends React.Component {
           {this.state.media.map(function(item, i){
             return(
               <Link to={`/media/${item.id}`}>
-                <div className="squareDiv">
-                  <img className="squareDivImg" key={item.id} src={item.media_url} alt=""/>
+                <div className="squareDiv" style={{backgroundImage: `url(${item.media_url})`}}>
                 </div>
               </Link>
             )
