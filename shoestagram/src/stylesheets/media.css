@@ -6,16 +6,11 @@
 }
 
 .mediaJumboPic {
-    height: 85vw;
+    height: 80vw;
     width: 100vw;
-    background-color: white;
+    background-color: blue;
     max-width: 600px;
     max-height: 600px;
-}
-
-.mediaJumboPic img {
-  height: 100%;
-  width: inherit;
 }
 
 
@@ -32,7 +27,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     padding: 0 3%;
-    color: #282828;
+    /*background-color: purple;*/
 }
 
 /*.buttonRow {
@@ -109,11 +104,10 @@ Collapsible section for Buy Online and Buy In Store
   text-align: center; }
 
 .Collapsible__contentInner {
-  padding: 0 10px;
- }
- 
+  padding: 10px;
+}
   .Collapsible__contentInner p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 20px; }
     .Collapsible__contentInner p:last-child {
@@ -172,6 +166,33 @@ Collapsible section for Buy Online and Buy In Store
     margin-bottom: 10px;
   }
 
+.priceLink {
+  font-family: "Poppins", "sans-serif";
+  font-weight: bold;
+  text-align: left;
+  padding: 0 2%;
+  margin-top: 5px;
+}
+
+.Collapsible__contentInner a {
+  color: #191919;
+  text-decoration: none;
+  margin-right: 2%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.linkedContent {
+  background-color: rgb(164, 222, 224);
+  padding: 3%;
+  display: flex;
+  border: 2px solid #42bec3;
+  max-height: 75px;
+  text-overflow: ellipsis;
+}
+
+.linkButton {
+  color: #42bec3;
+}
 /* Medium and up screen sizes */
 
 @media only screen and (min-width: 641px) {
@@ -193,30 +214,3 @@ Collapsible section for Buy Online and Buy In Store
 
 }
 
-.linkedContent {
-  background-color: rgb(164, 222, 224);
-  padding: 3%;
-  display: flex;
-  border: 2px solid #42bec3;
-  max-height: 75px;
-  text-overflow: ellipsis;
-}
-
-.Collapsible__contentInner a {
-  color: #191919;
-  text-decoration: none;
-  margin-right: 2%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.priceLink {
-  font-family: "Poppins", "sans-serif";
-  font-weight: bold;
-  text-align: left;
-  padding: 0 2%;
-  margin-top: 5px;
-}
-
-.linkButton {
-  color: #42bec3;
-}

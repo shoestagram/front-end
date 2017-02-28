@@ -78,6 +78,18 @@ class Media extends React.Component {
     this.fetchShopLinks();
   }
 
+  onClick(event, url){
+    event.preventDefault();
+
+    console.log(url);
+
+    if (window.confirm("Are you sure you want to leave Shoestagram?")) { 
+      window.open(url, "Thanks for Visiting!");
+      console.log(event);
+    }
+
+  }
+
   scrollToBottom() {
     scroll.scrollToBottom();
   }
@@ -119,12 +131,13 @@ class Media extends React.Component {
           triggerOpenedClassName="CustomTriggerCSS--open">        
             {this.state.shoplinks.map(function(item, i){
               return(
-                <a href={item.url}>
-                  <div>
+                <a href={item.url} target="_blank">
+                  <div className="linkedContent">
                     {item.source}
                     {item.description}
-                    <br />
-                    {item.price}
+                    <div className="priceLink">
+                      {'$'+item.price}
+                    </div>
                     <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
                   </div>
                 </a>
