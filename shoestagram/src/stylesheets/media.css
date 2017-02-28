@@ -8,9 +8,11 @@
 .mediaJumboPic {
     height: 80vw;
     width: 100vw;
-    background-color: blue;
     max-width: 600px;
     max-height: 600px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -27,58 +29,10 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     padding: 0 3%;
-    /*background-color: purple;*/
+    color: #2b2b2b;
 }
 
-/*.buttonRow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 0.8em;
-}
 
-.buyOnline {
-    background-color: #52386d;
-    color: white;
-    padding: 0.8em;
-    font-family: 'Poppins', sans-serif;
-    margin: 0 auto;
-    font-weight: 600;
-}
-
-.buyInStore {
-    background-color: #52386d;
-    color: white;
-    padding: 0.8em;
-    font-family: 'Poppins', sans-serif;
-    margin: 0 auto;
-    font-weight: 600;
-}
-
-.linkDiv {
-    background-color: #52386d;
-    min-height: 60px;
-    margin-bottom: 5px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: white;
-    width: 100%;
-    display: flex;
-}*/
-
-/*.linkButton {
-    min-width: 50px;
-    margin-left: 3%;
-    margin: auto;
-    padding: 0 10px;
-}*/
-
-/*
-.words {
-    line-height: 100%;
-    margin: auto;
-    text-align: left;
-    padding: 8px;
-}*/
 
 .productName {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -149,6 +103,10 @@ Collapsible section for Buy Online and Buy In Store
   background-color: #42bec4;
   text-align: center; 
   font-family: 'Poppins', sans-serif;
+}
+
+.emptyDiv {
+  width: 60px;
 }
 
 

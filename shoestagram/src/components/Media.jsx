@@ -76,20 +76,13 @@ class Media extends React.Component {
   componentDidMount(){
     this.fetchSingleImage();
     this.fetchShopLinks();
+    
+    this.scrollToTop();
   }
 
-  onClick(event, url){
-    event.preventDefault();
-
-    console.log(url);
-
-    if (window.confirm("Are you sure you want to leave Shoestagram?")) { 
-      window.open(url, "Thanks for Visiting!");
-      console.log(event);
-    }
-
+  scrollToTop(){
+    scroll.scrollToTop();
   }
-
   scrollToBottom() {
     scroll.scrollToBottom();
   }
@@ -107,8 +100,7 @@ class Media extends React.Component {
       
       <div className="mediaAll">
       <NavNoSearch m_id={media_id} u_id={user_id}/>
-          <div className="mediaJumboPic">
-            <img className="mediaJumboPic" src={this.state.media[0].media_url} key={this.state.media[0].id} alt=""/>
+          <div className="mediaJumboPic" style={{backgroundImage: `url(${this.state.media[0].media_url})`}}>
           </div>
           
           <h2 className="headerStyle">
@@ -119,7 +111,7 @@ class Media extends React.Component {
           </p>
          
         
-      <div className="buttons">
+      <div className="buttonOnline">
 
         <a onClick={this.scrollMore}>
           <Collapsible lazyRender 
@@ -131,21 +123,23 @@ class Media extends React.Component {
           triggerOpenedClassName="CustomTriggerCSS--open">        
             {this.state.shoplinks.map(function(item, i){
               return(
-                <a href={item.url} target="_blank">
+                <a href={item.url}>
                   <div className="linkedContent">
                     {item.source}
                     {item.description}
                     <div className="priceLink">
-                      {'$'+item.price}
+                    {item.price ? ('$'+item.price) : <div className="emptyDiv"></div>}
                     </div>
                     <div className="linkButton"><i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
                   </div>
                 </a>
-              )
+              );
             })}
           </Collapsible>
         </a>
+    </div>
 
+    <div className="buttonInStore">
         <a onClick={this.scrollToBottom}>
           <Collapsible lazyRender
           transitionTime={400} 
