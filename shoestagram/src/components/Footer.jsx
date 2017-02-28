@@ -24,6 +24,12 @@ class Footer extends React.Component {
          </Link>
         </div>
         
+        <div className="aboutDiv">
+          <Link to={`/about`}>
+            <i className="fa fa-question-circle fa-2x" aria-hidden="true"></i>
+         </Link>
+        </div>
+        
       </div>
     </div>
     );

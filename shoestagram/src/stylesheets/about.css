@@ -1,0 +1,63 @@
+.aboutAll {
+    margin-top: 90px;
+    margin-bottom: 55px;
+    height: 100%;
+    max-width: 600px;
+}
+
+.aboutAll .likeButton {
+    display: none;
+}
+
+.headerRow {
+    display:flex;
+    margin: 2%;
+    background-color: rgb(164, 222, 224);
+    border: 2px solid #42bec3;
+    text-decoration: none;
+    color: #000;
+}
+
+.mainHeader {
+    font-family: 'Poppins', sans-serif;
+    line-height: 110%;
+    margin-left: 2%;
+}
+
+.fa-github {
+    margin-top: 16px;
+    margin-right: 3%;
+    margin-left: 4%;
+}
+
+.midHeader {
+    text-align: center;
+}
+
+.personDiv {
+    margin: 2%;
+    background-color: #ecdded;
+    border: 2px solid #52386d;
+    text-decoration: none;
+    color: #000;
+    min-height: 110px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.personDiv p {
+    padding: 3%;
+    margin: 0;
+}
+
+.avatar{
+    float: left;
+    padding: 1%;
+}
+
+.personDiv a {
+    margin: 3%;
+}
+
+.aboutUs {
+    padding: 3%;
+}

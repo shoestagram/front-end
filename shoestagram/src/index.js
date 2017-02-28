@@ -8,6 +8,7 @@ import Media from './components/Media';
 // - MH ----------------------------------
 import Login from './components/Login';
 import Profile from './components/Profile';
+import About from './components/About';
 import AuthService from './utils/AuthService';
 const auth = new AuthService('pKH0zA7lEp39fr7ERuMpeEGf3HbDhWI2', 'bertha.auth0.com');
 
@@ -27,6 +28,7 @@ const routes = (
         <Route path="/login" component={ Login } auth={auth} />
         <Route path="/profile" component={ Profile } onEnter={requireAuth} auth={auth} />
         <Route path="/media/:id" component={ Media } onEnter={requireAuth} auth={auth} />
+        <Route path="/about" component={ About } />
     </Router>
 );
 

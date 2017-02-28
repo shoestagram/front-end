@@ -10,24 +10,33 @@
     justify-content: center;
 }
 
-.profileDiv a {
-    color: rgb(26, 20, 35);
-}
-
 .iconsAll {
     display: flex;
 }
 
 .profileDiv {
-   margin-left: 50px;
-   padding: 2px 8px;
+   margin: 0 auto;
+   padding: 2px 25px;
 }
 
 .homeDiv {
-   margin-right: 50px;
-   padding: 2px 8px;
+   margin: 0 auto;
+   padding: 2px 25px;
+}
+
+.aboutDiv {
+   margin: 0 auto;
+   padding: 2px 25px;
 }
 
 .homeDiv a {
    color: rgb(26, 20, 35); 
+}
+
+.aboutDiv a {
+    color: rgb(26, 20, 35);
+}
+
+.profileDiv a {
+    color: rgb(26, 20, 35);
 }
