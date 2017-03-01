@@ -14,7 +14,7 @@ var scroll = Scroll.animateScroll;
 //to change Like button on click <i className="fa fa-thumbs-up" aria-hidden="true"></i>
 
 class Media extends React.Component {
-  
+
     constructor() {
       super();
       this.state = {
@@ -31,15 +31,15 @@ class Media extends React.Component {
   }
 
   fetchSingleImage = () => {
-      
+
       var media_id = this.props.params.id;
-      
+
       this.setState({
           loading: true,
       });
 
-     
-      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/media/${media_id}`
+
+      var url = `http://shoestagram.net:3000/media/${media_id}`
       console.log(url);
 
 
@@ -52,12 +52,12 @@ class Media extends React.Component {
           }.bind(this)
       );
   }
-  
+
   fetchShopLinks = () => {
-      
+
       var media_id = this.props.params.id;
-      
-      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/shoplinks/${media_id}`
+
+      var url = `http://shoestagram.net:3000/shoplinks/${media_id}`
       console.log(url);
 
 
@@ -67,7 +67,7 @@ class Media extends React.Component {
               this.setState({
                   shoplinks: data
               });
-              
+
           }.bind(this)
       );
   }
@@ -76,7 +76,7 @@ class Media extends React.Component {
   componentDidMount(){
     this.fetchSingleImage();
     this.fetchShopLinks();
-    
+
     this.scrollToTop();
   }
 
@@ -91,35 +91,35 @@ class Media extends React.Component {
     scroll.scrollMore(300);
     //onClick, the collapsible window will scroll 300px UP from where it was
   }
-  
+
   render() {
     var media_id = this.props.params.id;
     var user_id = this.props.route.auth.getProfile().user_id;
-    
+
     return (
-      
+
       <div className="mediaAll">
       <NavNoSearch m_id={media_id} u_id={user_id}/>
           <div className="mediaJumboPic" style={{backgroundImage: `url(${this.state.media[0].media_url})`}}>
           </div>
-          
+
           <h2 className="headerStyle">
             {this.state.media[0].text}
           </h2>
           <p className="parStyle">
             {this.state.media[0].keyword}
           </p>
-         
-      
-      {this.state.shoplinks[0] ? (<div className="buttonOnline">   
+
+
+      {this.state.shoplinks[0] ? (<div className="buttonOnline">
         <a onClick={this.scrollMore}>
-          <Collapsible lazyRender 
-          transitionTime={600} 
-          trigger="Buy Online" 
-          easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} 
+          <Collapsible lazyRender
+          transitionTime={600}
+          trigger="Buy Online"
+          easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'}
           overflowWhenOpen="visible"
           triggerClassName="CustomTriggerCSS"
-          triggerOpenedClassName="CustomTriggerCSS--open">        
+          triggerOpenedClassName="CustomTriggerCSS--open">
             {this.state.shoplinks.map(function(item, i){
               return(
                 <a href={item.url}>
@@ -141,8 +141,8 @@ class Media extends React.Component {
     <div className="buttonInStore">
         <a onClick={this.scrollToBottom}>
           <Collapsible lazyRender
-          transitionTime={400} 
-          trigger="Buy In Store" 
+          transitionTime={400}
+          trigger="Buy In Store"
           easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'}
           triggerClassName="CustomTriggerCSS"
           triggerOpenedClassName="CustomTriggerCSS--open">
@@ -152,8 +152,8 @@ class Media extends React.Component {
           </Collapsible>
         </a>
 
-      </div>  
-        
+      </div>
+
         <Footer />
       </div>
     );

@@ -24,7 +24,7 @@ export class Profile extends React.Component {
     this.state = {
       profile: props.route.auth.getProfile(),
       media:[]
-      
+
     };
     //listen to profile_updated events to update internal state
     props.route.auth.on('profile_updated', (newProfile) => {
@@ -36,9 +36,9 @@ export class Profile extends React.Component {
       // This is the user ID
       const { profile } = this.state;
       var user_id = profile.user_id;
-      
-      var url = `https://cors-anywhere.herokuapp.com/https://shoestagram-allendecodemtl.c9users.io/profile`
-      
+
+      var url = `http://shoestagram.net:3000/profile`
+
       fetch(url, {
       	headers: new Headers({
       		'Content-Type': 'application/x-www-form-urlencoded',
@@ -72,7 +72,7 @@ export class Profile extends React.Component {
   render() {
     const { profile } = this.state;
     //console.log(profile);
-    
+
     return (
         <div className="profileAll">
         <NavNoSearch hideLikeBtn="{true}" auth={this.props.route.auth}/>
@@ -89,7 +89,7 @@ export class Profile extends React.Component {
            {this.state.media.map(function(item, i){
             return(
             <Link to={`/media/${item.id}`}>
-                
+
               <div>
                 <img className="squareLikes" key={item.id} src={item.media_url} alt=""/>
               </div>

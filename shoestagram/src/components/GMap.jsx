@@ -8,7 +8,7 @@ function toLatLng(geo_loc){
     //var array = "45 -73".split(" ").map(element => +element); //returns [45, -73]
     var array = geo_loc.split(" ")
                 .map(element => +element);
-                
+
     var latLng = {lat: array[0], lng: array[1]};
     return latLng;
 }
@@ -29,7 +29,7 @@ function formatMarkers(store){
               </div>
             </div>
           )
-  };  
+  };
 }
 
 //===========================================================================
@@ -87,11 +87,11 @@ class GMap extends React.Component {
     this.fetchData();
   }
 
-  //this fetches the sneaker stores in Montreal from our shoestagram API retail_shops endpoint 
+  //this fetches the sneaker stores in Montreal from our shoestagram API retail_shops endpoint
   fetchData(){
     console.log("before fetching");
 
-    fetch(`https://cors-anywhere.herokuapp.com/http://shoestagram-allendecodemtl.c9users.io/retail_shops`)
+    fetch(`http://shoestagram.net:3000/retail_shops`)
     .then(response => response.json())
     .then(function(data){
 

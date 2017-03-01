@@ -9,7 +9,7 @@ export default class AuthService extends EventEmitter {
     this.lock = new Auth0Lock(clientId, domain, {
       auth: {
         // redirectUrl: 'http://localhost:3000/login',
-        redirectUrl: 'https://shoestagram-coco-moloko.c9users.io/login',
+        redirectUrl: 'http://shoestagram.net/login',
         responseType: 'token'
       }
     })

@@ -24,7 +24,7 @@ const requireAuth = (nextState, replace) => {
 
 const routes = (
     <Router history={ browserHistory }>
-        <Route path="/" component={ App } onEnter={requireAuth} auth={auth} />
+        <Route path="/" component={ App } auth={auth} />
         <Route path="/login" component={ Login } auth={auth} />
         <Route path="/profile" component={ Profile } onEnter={requireAuth} auth={auth} />
         <Route path="/media/:id" component={ Media } onEnter={requireAuth} auth={auth} />
