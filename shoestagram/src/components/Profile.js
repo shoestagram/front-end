@@ -1,10 +1,13 @@
 import React, { PropTypes as T } from 'react';
+import Scroll from 'react-scroll';
 import AuthService from '../utils/AuthService';
 import '../stylesheets/profile.css';
 import NavNoSearch from './NavNoSearch';
 import Footer from './Footer';
 import { Link } from 'react-router';
 
+
+var scroll = Scroll.animateScroll;
 
 export class Profile extends React.Component {
   static contextTypes = {
@@ -59,8 +62,12 @@ export class Profile extends React.Component {
 
   componentDidMount(){
     this.fetchData();
+    this.scrollToTop();
   }
 
+  scrollToTop(){
+    scroll.scrollToTop();
+  }
 
   render() {
     const { profile } = this.state;

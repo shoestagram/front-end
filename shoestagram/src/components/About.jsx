@@ -1,11 +1,24 @@
 import NavNoSearch from './NavNoSearch';
 import Footer from './Footer';
 import React from 'react';
+import Scroll from 'react-scroll';
 import '../stylesheets/about.css';
 
+var scroll = Scroll.animateScroll;
 
 export class About extends React.Component {
+  constructor(){
+    super();
+  }
   
+  componentDidMount(){
+    this.scrollToTop();
+  }
+
+  scrollToTop(){
+    scroll.scrollToTop();
+  }
+
   render() {
       return(
         <div className="aboutAll"> 

@@ -1,10 +1,13 @@
 import React from 'react';
+import Scroll from 'react-scroll';
 import '../stylesheets/home.css';
 import { Link } from 'react-router';
 
+var scroll = Scroll.animateScroll;
+
 class Home extends React.Component {
   
-    constructor() {
+  constructor() {
       super();
       this.state = {
         media:[]
@@ -58,12 +61,18 @@ class Home extends React.Component {
       //     media: [],
       // });
       this.fetchData();
+      this.scrollToTop();
     }
   }
 
   componentDidMount(){
     this.fetchData();
   }
+
+  scrollToTop(){
+    scroll.scrollToTop();
+  }
+
   render() {
     return (
       <div className="homeAll">
